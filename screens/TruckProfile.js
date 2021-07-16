@@ -3,13 +3,14 @@ import * as React from 'react';
 import {
   View,
   Text,
-  TextInput,Image
+  TextInput,Image,ScrollView,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 
 function TruckProfile() {
     return (
+      <ScrollView>
       <View style={{flex: 1}}>
         <View
           style={{justifyContent: 'center', alignItems: 'center',marginTop:1,marginBottom:10,flexDirection:'row',marginTop:20}}>
@@ -208,8 +209,7 @@ function TruckProfile() {
           </View>
         </View>
       </View>
+      </ScrollView>
     );
   }
-  
-
   export default TruckProfile;

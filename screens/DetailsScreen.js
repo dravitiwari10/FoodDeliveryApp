@@ -34,20 +34,30 @@ function DetailsScreen({route}) {
           </View>
         </ImageBackground>
         <View style={styles.footer}>
-        <Text style={{fontWeight: 'bold', fontSize: 16, margin: 15}}>
-          First name                       {route.params.paramKey1}
+        <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+          <Text style={{fontWeight: 'bold', fontSize: 16,}}>
+           First name                       
+          </Text>
+          <Text>{route.params.paramKey1}</Text>
+        </View>
+        <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+        <Text style={{fontWeight: 'bold', fontSize: 16, }}>
+          Last name
         </Text>
-  
-        <Text style={{fontWeight: 'bold', fontSize: 16, margin: 15}}>
-          Last name                       {route.params.paramKey3}
+        <Text>{route.params.paramKey3}</Text>
+        </View>
+        <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+        <Text style={{fontWeight: 'bold', fontSize: 16,}}>
+          Contact number            
         </Text>
-  
+        <Text>{route.params.paramKey2}</Text>
+        </View>
+        <View style={{flexDirection:'row',justifyContent:'space-around'}}>
         <Text style={{fontWeight: 'bold', fontSize: 16, margin: 15}}>
-          Contact number            {route.params.paramKey2}
+          Email Address                
         </Text>
-        <Text style={{fontWeight: 'bold', fontSize: 16, margin: 15}}>
-          Email Address                {route.params.paramKey4}
-        </Text>
+        <Text>{route.params.paramKey4}</Text>
+        </View>
         </View>
       </View>
     );

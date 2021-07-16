@@ -41,12 +41,14 @@ function ProfileScreen({navigation}) {
             }}
           />
           <View style={{marginLeft: 80}}>
+            <TouchableOpacity  onPress={() =>navigation.navigate('PROFILE')}>
             <FontAwesome
               name="edit"
               size={22}
               color="green"
               backgroundColor="green"
             />
+            </TouchableOpacity>
           </View>
         </View>
       </ImageBackground>
@@ -108,7 +110,7 @@ function ProfileScreen({navigation}) {
         <View>
           <TouchableOpacity
             onPress={() =>
-              navigation.navigate('Details', {
+              navigation.navigate('MyAccountScreen', {
                 paramKey1: userName,
                 paramKey2: mobileNumber,
                 paramKey3: name,

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -11,11 +11,59 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 
 function LoginScreen({navigation}) {
+  // const intialValues = { email: "", password: "" };
+
+  // const [formValues, setFormValues] = useState(intialValues);
+  // const [formErrors, setFormErrors] = useState({});
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // const submit = () => {
+  //   console.log(formValues);
+  // };
+
+  // //input change handler
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormValues({ ...formValues, [name]: value });
+  // };
+
+  // //form submission handler
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setFormErrors(validate(formValues));
+  //   setIsSubmitting(true);
+  // };
+
+  // //form validation handler
+  // const validate = (values) => {
+  //   let errors = {};
+  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+  //   if (!values.email) {
+  //     errors.email = "Cannot be blank";
+  //   } else if (!regex.test(values.email)) {
+  //     errors.email = "Invalid email format";
+  //   }
+
+  //   if (!values.password) {
+  //     errors.password = "Cannot be blank";
+  //   } else if (values.password.length < 4) {
+  //     errors.password = "Password must be more than 4 characters";
+  //   }
+
+  //   return errors;
+  // };
+
+  // useEffect(() => {
+  //   if (Object.keys(formErrors).length === 0 && isSubmitting) {
+  //     submit();
+  //   }
+  // }, [formErrors]);
     return (
-      <ImageBackground
-      source={{
-        uri: 'https://icdn.digitaltrends.com/image/digitaltrends/gopuff-press-416x278.jpg'}}
-        style={{height: 600, width: 400}}>
+      // <ImageBackground
+      // source={{
+      //   uri: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'}}
+      //   style={{height: 600, width: 400}}>
         <View style={styles.container}>
           <View style={styles.header}>
             <Text style={styles.welcome}>LOGO</Text>
@@ -23,10 +71,9 @@ function LoginScreen({navigation}) {
           <View style={styles.footer}>
             <View style={{marginLeft: 20}}>
               <Text>username</Text>
-              <View style={{flexDirection: 'row'}}>
-                <FontAwesome name="user-o" size={22} color='green' />
-                <TextInput style={styles.input} placeholder="your username" />
-                <FontAwesome name="check-circle" size={22} />
+              <View>
+                <FontAwesome name="user-o" size={22} color='green' style={{position:'absolute',top:20}} />
+                <TextInput placeholder="your username" />
               </View>
               <Text>password</Text>
               <View style={{flexDirection: 'row'}}>
@@ -59,7 +106,7 @@ function LoginScreen({navigation}) {
             </View>
           </View>
         </View>
-       </ImageBackground>
+      //  </ImageBackground>
       
     );
   }
@@ -68,6 +115,7 @@ function LoginScreen({navigation}) {
     container: {
       flex: 1,
       justifyContent: 'center',
+      backgroundColor:'blue'
     },
     header: {
       flex: 1.2,
